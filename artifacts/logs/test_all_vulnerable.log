@@ -1,0 +1,66 @@
+No files changed, compilation skipped
+
+Ran 1 test for test/CloneFactory_Happy.t.sol:CloneFactory_Happy
+[PASS] test_clone_init_deposit_withdraw_OK() (gas: 246326)
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 411.08µs (110.50µs CPU time)
+
+Ran 1 test for test/CloneFactory_PoC.t.sol:CloneFactory_PoC
+[PASS] test_PoC_Init_Implementation_Contract_Success() (gas: 91361)
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 564.58µs (60.33µs CPU time)
+
+Ran 6 tests for test/CloneFactory_Revert.t.sol:CloneFactory_Revert
+[PASS] testRevert_Clone_InsufficientBalance() (gas: 210855)
+[PASS] testRevert_Clone_NotOwner() (gas: 182142)
+[PASS] testRevert_Clone_TransferFailed() (gas: 218568)
+[PASS] testRevert_Clone_ZeroValue() (gas: 180230)
+[PASS] testRevert_Factory_AlreadyDeployed() (gas: 183593)
+[PASS] testRevert_Factory_InitFailed() (gas: 61534)
+Suite result: ok. 6 passed; 0 failed; 0 skipped; finished in 635.58µs (969.21µs CPU time)
+
+Ran 1 test for test/CloneFactory_Fuzz.t.sol:CloneFactory_Fuzz
+[PASS] testFuzz_deposit_withdraw(uint96,uint96) (runs: 257, μ: 251608, ~: 253602)
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 16.09ms (15.61ms CPU time)
+
+Ran 3 tests for test/CloneFactory_Invariant.t.sol:CloneFactory_Invariant
+[PASS] invariant_ledgerNeverExceedsRealETH() (runs: 500, calls: 50000, reverts: 0)
+
+╭----------+-------------+-------+---------+----------╮
+| Contract | Selector    | Calls | Reverts | Discards |
++=====================================================+
+| Handler  | createVault | 16664 | 0       | 74       |
+|----------+-------------+-------+---------+----------|
+| Handler  | deposit     | 16892 | 0       | 86       |
+|----------+-------------+-------+---------+----------|
+| Handler  | withdraw    | 16674 | 0       | 70       |
+╰----------+-------------+-------+---------+----------╯
+
+Logs:
+  Bound result 0
+
+[PASS] invariant_ownerNeverChange() (runs: 500, calls: 50000, reverts: 0)
+
+╭----------+-------------+-------+---------+----------╮
+| Contract | Selector    | Calls | Reverts | Discards |
++=====================================================+
+| Handler  | createVault | 16709 | 0       | 67       |
+|----------+-------------+-------+---------+----------|
+| Handler  | deposit     | 16786 | 0       | 69       |
+|----------+-------------+-------+---------+----------|
+| Handler  | withdraw    | 16700 | 0       | 59       |
+╰----------+-------------+-------+---------+----------╯
+
+[PASS] invariant_vaultListAreDeployedContracts() (runs: 500, calls: 50000, reverts: 0)
+
+╭----------+-------------+-------+---------+----------╮
+| Contract | Selector    | Calls | Reverts | Discards |
++=====================================================+
+| Handler  | createVault | 16935 | 0       | 56       |
+|----------+-------------+-------+---------+----------|
+| Handler  | deposit     | 16751 | 0       | 69       |
+|----------+-------------+-------+---------+----------|
+| Handler  | withdraw    | 16510 | 0       | 71       |
+╰----------+-------------+-------+---------+----------╯
+
+Suite result: ok. 3 passed; 0 failed; 0 skipped; finished in 6.80s (20.38s CPU time)
+
+Ran 5 test suites in 6.81s (6.82s CPU time): 12 tests passed, 0 failed, 0 skipped (12 total tests)

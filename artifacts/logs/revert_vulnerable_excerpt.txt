@@ -1,0 +1,7 @@
+6:[PASS] testRevert_Clone_InsufficientBalance() (gas: 210855)
+7:[PASS] testRevert_Clone_NotOwner() (gas: 182142)
+8:[PASS] testRevert_Clone_TransferFailed() (gas: 218568)
+9:[PASS] testRevert_Clone_ZeroValue() (gas: 180230)
+10:[PASS] testRevert_Factory_AlreadyDeployed() (gas: 183593)
+11:[PASS] testRevert_Factory_InitFailed() (gas: 61534)
+12:Suite result: ok. 6 passed; 0 failed; 0 skipped; finished in 664.79µs (1.05ms CPU time)

@@ -1,0 +1,44 @@
+Compiling 1 files with Solc 0.8.30
+Solc 0.8.30 finished in 325.68ms
+Compiler run successful!
+
+Ran 3 tests for test/CloneFactory_Invariant.t.sol:CloneFactory_Invariant
+[PASS] invariant_ledgerNeverExceedsRealETH() (runs: 500, calls: 50000, reverts: 0)
+
+╭----------+-------------+-------+---------+----------╮
+| Contract | Selector    | Calls | Reverts | Discards |
++=====================================================+
+| Handler  | createVault | 16670 | 0       | 64       |
+|----------+-------------+-------+---------+----------|
+| Handler  | deposit     | 16807 | 0       | 70       |
+|----------+-------------+-------+---------+----------|
+| Handler  | withdraw    | 16722 | 0       | 65       |
+╰----------+-------------+-------+---------+----------╯
+
+[PASS] invariant_ownerNeverChange() (runs: 500, calls: 50000, reverts: 0)
+
+╭----------+-------------+-------+---------+----------╮
+| Contract | Selector    | Calls | Reverts | Discards |
++=====================================================+
+| Handler  | createVault | 16713 | 0       | 72       |
+|----------+-------------+-------+---------+----------|
+| Handler  | deposit     | 16915 | 0       | 59       |
+|----------+-------------+-------+---------+----------|
+| Handler  | withdraw    | 16578 | 0       | 75       |
+╰----------+-------------+-------+---------+----------╯
+
+[PASS] invariant_vaultListAreDeployedContracts() (runs: 500, calls: 50000, reverts: 0)
+
+╭----------+-------------+-------+---------+----------╮
+| Contract | Selector    | Calls | Reverts | Discards |
++=====================================================+
+| Handler  | createVault | 16657 | 0       | 59       |
+|----------+-------------+-------+---------+----------|
+| Handler  | deposit     | 16678 | 0       | 77       |
+|----------+-------------+-------+---------+----------|
+| Handler  | withdraw    | 16873 | 0       | 72       |
+╰----------+-------------+-------+---------+----------╯
+
+Suite result: ok. 3 passed; 0 failed; 0 skipped; finished in 6.93s (20.76s CPU time)
+
+Ran 1 test suite in 6.93s (6.93s CPU time): 3 tests passed, 0 failed, 0 skipped (3 total tests)

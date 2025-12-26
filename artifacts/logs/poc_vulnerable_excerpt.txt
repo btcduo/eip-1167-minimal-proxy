@@ -1,0 +1,2 @@
+4:[PASS] test_PoC_Init_Implementation_Contract_Success() (gas: 91361)
+5:Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 424.42µs (63.08µs CPU time)

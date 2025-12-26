@@ -1,0 +1,62 @@
+'forge clean' running (wd: /Volumes/data/code/solidity/learning/smart-contract-security-portfolio/modules/eip-1167-minimal-proxy)
+'forge config --json' running
+'forge build --build-info --skip */test/** */script/** --force' running (wd: /Volumes/data/code/solidity/learning/smart-contract-security-portfolio/modules/eip-1167-minimal-proxy)
+INFO:Detectors:
+Contract locking ether found:
+	Contract Receiver (src/mocks/Receiver.sol#4-10) has payable functions:
+	 - Receiver.fallback() (src/mocks/Receiver.sol#7-9)
+	But does not have a function to withdraw the ether
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#contracts-that-lock-ether
+INFO:Detectors:
+Reentrancy in VaultFactory.create() (src/VaultFactory.sol#42-51):
+	External calls:
+	- clone = _deployClone(salt,initData) (src/VaultFactory.sol#47)
+		- (ok,None) = clone.call(initData) (src/BaseCloneFactory.sol#27)
+	State variables written after the call(s):
+	- userVaults[msg.sender].push(clone) (src/VaultFactory.sol#48)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#reentrancy-vulnerabilities-2
+INFO:Detectors:
+Reentrancy in VaultFactory.create() (src/VaultFactory.sol#42-51):
+	External calls:
+	- clone = _deployClone(salt,initData) (src/VaultFactory.sol#47)
+		- (ok,None) = clone.call(initData) (src/BaseCloneFactory.sol#27)
+	Event emitted after the call(s):
+	- Clone(msg.sender,clone,salt,initData) (src/VaultFactory.sol#50)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#reentrancy-vulnerabilities-3
+INFO:Detectors:
+Implementation.owner() (src/Implementation.sol#59-64) uses assembly
+	- INLINE ASM (src/Implementation.sol#61-63)
+Implementation._setOwner(address) (src/Implementation.sol#66-71) uses assembly
+	- INLINE ASM (src/Implementation.sol#68-70)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#assembly-usage
+INFO:Detectors:
+2 different versions of Solidity are used:
+	- Version constraint ^0.8.20 is used by:
+		-^0.8.20 (lib/openzeppelin-contracts/contracts/proxy/Clones.sol#4)
+		-^0.8.20 (lib/openzeppelin-contracts/contracts/proxy/utils/Initializable.sol#4)
+		-^0.8.20 (lib/openzeppelin-contracts/contracts/utils/Create2.sol#4)
+		-^0.8.20 (lib/openzeppelin-contracts/contracts/utils/Errors.sol#4)
+		-^0.8.20 (lib/openzeppelin-contracts/contracts/utils/LowLevelCall.sol#4)
+	- Version constraint ^0.8.30 is used by:
+		-^0.8.30 (src/BaseCloneFactory.sol#2)
+		-^0.8.30 (src/Implementation.sol#2)
+		-^0.8.30 (src/VaultFactory.sol#2)
+		-^0.8.30 (src/interfaces/ILogic.sol#2)
+		-^0.8.30 (src/mocks/Receiver.sol#2)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#different-pragma-directives-are-used
+INFO:Detectors:
+Low level call in BaseCloneFactory._deployClone(bytes32,bytes) (src/BaseCloneFactory.sol#20-31):
+	- (ok,None) = clone.call(initData) (src/BaseCloneFactory.sol#27)
+Low level call in Implementation.withdraw(uint256) (src/Implementation.sol#44-53):
+	- (ok,None) = msg.sender.call{value: amount}() (src/Implementation.sol#49)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#low-level-calls
+INFO:Detectors:
+Implementation (src/Implementation.sol#10-77) should inherit from ILogic (src/interfaces/ILogic.sol#4-6)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#missing-inheritance
+INFO:Detectors:
+Parameter Implementation.initialize(address)._owner (src/Implementation.sol#31) is not in mixedCase
+Parameter VaultFactory.createWithRevert(uint256,bytes)._nonce (src/VaultFactory.sol#53) is not in mixedCase
+Parameter VaultFactory.predictVaultAddr(address)._user (src/VaultFactory.sol#78) is not in mixedCase
+Parameter VaultFactory.getUserVaults(address)._user (src/VaultFactory.sol#84) is not in mixedCase
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#conformance-to-solidity-naming-conventions
+INFO:Slither:. analyzed (10 contracts with 100 detectors), 13 result(s) found
