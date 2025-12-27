@@ -19,6 +19,11 @@ contract Implementation is Initializable {
     error InsufficientBalance();
     error TransferFailed();
 
+    /// @dev Fixed: adds _disableInitializers(), preventing user from initializing this context.
+    constructor() {
+        _disableInitializers();
+    }
+
     /// @dev Owner-gated functions for demo(deposit/withdraw are restricted on purpose)
     modifier onlyOwner() {
         if (msg.sender != owner()) {

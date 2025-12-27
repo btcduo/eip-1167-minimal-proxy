@@ -1,8 +1,6 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-mkdir -p out/logs
-
 extract() {
   local src="$1"
   local dst="$2"
@@ -13,35 +11,35 @@ extract() {
 
 # Invariant
 forge test --match-path test/CloneFactory_Invariant.t.sol -vvv 2>&1 \
-  | tee out/logs/invariant_vulnerable.log
-extract out/logs/invariant_vulnerable.log \
-        out/logs/invariant_vulnerable_excerpt.txt
+  | tee artifacts/logs/invariant.log
+extract artifacts/logs/invariant.log \
+        artifacts/logs/invariant_excerpt.txt
 
 # Happy
 forge test --match-path test/CloneFactory_Happy.t.sol -vvv 2>&1 \
-  | tee out/logs/happy_vulnerable.log
-extract out/logs/happy_vulnerable.log \
-        out/logs/happy_vulnerable_excerpt.txt
+  | tee artifacts/logs/happy.log
+extract artifacts/logs/happy.log \
+        artifacts/logs/happy_excerpt.txt
 
 # Revert
 forge test --match-path test/CloneFactory_Revert.t.sol -vvv 2>&1 \
-  | tee out/logs/revert_vulnerable.log
-extract out/logs/revert_vulnerable.log \
-        out/logs/revert_vulnerable_excerpt.txt
+  | tee artifacts/logs/revert.log
+extract artifacts/logs/revert.log \
+        artifacts/logs/revert_excerpt.txt
 
 # Fuzz
 forge test --match-path test/CloneFactory_Fuzz.t.sol -vvv 2>&1 \
-  | tee out/logs/fuzz_vulnerable.log
-extract out/logs/fuzz_vulnerable.log \
-        out/logs/fuzz_vulnerable_excerpt.txt
+  | tee artifacts/logs/fuzz.log
+extract artifacts/logs/fuzz.log \
+        artifacts/logs/fuzz_excerpt.txt
 
-# PoC
-forge test --match-path test/CloneFactory_PoC.t.sol -vvv 2>&1 \
-  | tee out/logs/poc_vulnerable.log
-extract out/logs/poc_vulnerable.log \
-        out/logs/poc_vulnerable_excerpt.txt
+# PoC-Fixed
+forge test --match-path test/CloneFactory_PoC_Fixed.t.sol -vvv 2>&1 \
+  | tee artifacts/logs/poc.log
+extract artifacts/logs/poc.log \
+        artifacts/logs/poc_excerpt.txt
 
 # All tests
-forge test -vvv 2>&1 | tee out/logs/test_all_vulnerable.log
-extract out/logs/test_all_vulnerable.log \
-        out/logs/test_all_vulnerable_excerpt.txt
+forge test -vvv 2>&1 | tee artifacts/logs/test_all.log
+extract artifacts/logs/test_all.log \
+        artifacts/logs/test_all_excerpt.txt

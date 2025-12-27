@@ -1,7 +1,0 @@
-No files changed, compilation skipped
-
-Ran 1 test for test/CloneFactory_Happy.t.sol:CloneFactory_Happy
-[PASS] test_clone_init_deposit_withdraw_OK() (gas: 246326)
-Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 484.75µs (120.75µs CPU time)
-
-Ran 1 test suite in 90.82ms (484.75µs CPU time): 1 tests passed, 0 failed, 0 skipped (1 total tests)

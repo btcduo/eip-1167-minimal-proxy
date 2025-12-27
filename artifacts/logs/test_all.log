@@ -2,11 +2,12 @@ No files changed, compilation skipped
 
 Ran 1 test for test/CloneFactory_Happy.t.sol:CloneFactory_Happy
 [PASS] test_clone_init_deposit_withdraw_OK() (gas: 246326)
-Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 411.08µs (110.50µs CPU time)
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 484.88µs (103.83µs CPU time)
 
-Ran 1 test for test/CloneFactory_PoC.t.sol:CloneFactory_PoC
-[PASS] test_PoC_Init_Implementation_Contract_Success() (gas: 91361)
-Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 564.58µs (60.33µs CPU time)
+Ran 2 tests for test/CloneFactory_PoC_Fixed.t.sol:CloneFactory_PoC_Fixed
+[PASS] test_Implementation_Init_Reverts_AfterFix() (gas: 14569)
+[PASS] test_Init_ViaFactory_WorkOut_AfterFix() (gas: 179094)
+Suite result: ok. 2 passed; 0 failed; 0 skipped; finished in 266.21µs (99.75µs CPU time)
 
 Ran 6 tests for test/CloneFactory_Revert.t.sol:CloneFactory_Revert
 [PASS] testRevert_Clone_InsufficientBalance() (gas: 210855)
@@ -15,11 +16,11 @@ Ran 6 tests for test/CloneFactory_Revert.t.sol:CloneFactory_Revert
 [PASS] testRevert_Clone_ZeroValue() (gas: 180230)
 [PASS] testRevert_Factory_AlreadyDeployed() (gas: 183593)
 [PASS] testRevert_Factory_InitFailed() (gas: 61534)
-Suite result: ok. 6 passed; 0 failed; 0 skipped; finished in 635.58µs (969.21µs CPU time)
+Suite result: ok. 6 passed; 0 failed; 0 skipped; finished in 673.50µs (605.88µs CPU time)
 
 Ran 1 test for test/CloneFactory_Fuzz.t.sol:CloneFactory_Fuzz
-[PASS] testFuzz_deposit_withdraw(uint96,uint96) (runs: 257, μ: 251608, ~: 253602)
-Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 16.09ms (15.61ms CPU time)
+[PASS] testFuzz_deposit_withdraw(uint96,uint96) (runs: 256, μ: 251205, ~: 253602)
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 15.61ms (15.22ms CPU time)
 
 Ran 3 tests for test/CloneFactory_Invariant.t.sol:CloneFactory_Invariant
 [PASS] invariant_ledgerNeverExceedsRealETH() (runs: 500, calls: 50000, reverts: 0)
@@ -27,26 +28,27 @@ Ran 3 tests for test/CloneFactory_Invariant.t.sol:CloneFactory_Invariant
 ╭----------+-------------+-------+---------+----------╮
 | Contract | Selector    | Calls | Reverts | Discards |
 +=====================================================+
-| Handler  | createVault | 16664 | 0       | 74       |
+| Handler  | createVault | 16810 | 0       | 67       |
 |----------+-------------+-------+---------+----------|
-| Handler  | deposit     | 16892 | 0       | 86       |
+| Handler  | deposit     | 16633 | 0       | 52       |
 |----------+-------------+-------+---------+----------|
-| Handler  | withdraw    | 16674 | 0       | 70       |
+| Handler  | withdraw    | 16727 | 0       | 51       |
 ╰----------+-------------+-------+---------+----------╯
 
 Logs:
   Bound result 0
+  Bound result 9812
 
 [PASS] invariant_ownerNeverChange() (runs: 500, calls: 50000, reverts: 0)
 
 ╭----------+-------------+-------+---------+----------╮
 | Contract | Selector    | Calls | Reverts | Discards |
 +=====================================================+
-| Handler  | createVault | 16709 | 0       | 67       |
+| Handler  | createVault | 16636 | 0       | 65       |
 |----------+-------------+-------+---------+----------|
-| Handler  | deposit     | 16786 | 0       | 69       |
+| Handler  | deposit     | 16747 | 0       | 66       |
 |----------+-------------+-------+---------+----------|
-| Handler  | withdraw    | 16700 | 0       | 59       |
+| Handler  | withdraw    | 16808 | 0       | 60       |
 ╰----------+-------------+-------+---------+----------╯
 
 [PASS] invariant_vaultListAreDeployedContracts() (runs: 500, calls: 50000, reverts: 0)
@@ -54,13 +56,13 @@ Logs:
 ╭----------+-------------+-------+---------+----------╮
 | Contract | Selector    | Calls | Reverts | Discards |
 +=====================================================+
-| Handler  | createVault | 16935 | 0       | 56       |
+| Handler  | createVault | 16683 | 0       | 67       |
 |----------+-------------+-------+---------+----------|
-| Handler  | deposit     | 16751 | 0       | 69       |
+| Handler  | deposit     | 16818 | 0       | 74       |
 |----------+-------------+-------+---------+----------|
-| Handler  | withdraw    | 16510 | 0       | 71       |
+| Handler  | withdraw    | 16709 | 0       | 69       |
 ╰----------+-------------+-------+---------+----------╯
 
-Suite result: ok. 3 passed; 0 failed; 0 skipped; finished in 6.80s (20.38s CPU time)
+Suite result: ok. 3 passed; 0 failed; 0 skipped; finished in 6.74s (20.22s CPU time)
 
-Ran 5 test suites in 6.81s (6.82s CPU time): 12 tests passed, 0 failed, 0 skipped (12 total tests)
+Ran 5 test suites in 6.75s (6.76s CPU time): 13 tests passed, 0 failed, 0 skipped (13 total tests)

@@ -24,10 +24,10 @@ Reentrancy in VaultFactory.create() (src/VaultFactory.sol#42-51):
 	- Clone(msg.sender,clone,salt,initData) (src/VaultFactory.sol#50)
 Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#reentrancy-vulnerabilities-3
 INFO:Detectors:
-Implementation.owner() (src/Implementation.sol#59-64) uses assembly
-	- INLINE ASM (src/Implementation.sol#61-63)
-Implementation._setOwner(address) (src/Implementation.sol#66-71) uses assembly
-	- INLINE ASM (src/Implementation.sol#68-70)
+Implementation.owner() (src/Implementation.sol#64-69) uses assembly
+	- INLINE ASM (src/Implementation.sol#66-68)
+Implementation._setOwner(address) (src/Implementation.sol#71-76) uses assembly
+	- INLINE ASM (src/Implementation.sol#73-75)
 Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#assembly-usage
 INFO:Detectors:
 2 different versions of Solidity are used:
@@ -47,14 +47,14 @@ Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#differe
 INFO:Detectors:
 Low level call in BaseCloneFactory._deployClone(bytes32,bytes) (src/BaseCloneFactory.sol#20-31):
 	- (ok,None) = clone.call(initData) (src/BaseCloneFactory.sol#27)
-Low level call in Implementation.withdraw(uint256) (src/Implementation.sol#44-53):
-	- (ok,None) = msg.sender.call{value: amount}() (src/Implementation.sol#49)
+Low level call in Implementation.withdraw(uint256) (src/Implementation.sol#49-58):
+	- (ok,None) = msg.sender.call{value: amount}() (src/Implementation.sol#54)
 Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#low-level-calls
 INFO:Detectors:
-Implementation (src/Implementation.sol#10-77) should inherit from ILogic (src/interfaces/ILogic.sol#4-6)
+Implementation (src/Implementation.sol#10-82) should inherit from ILogic (src/interfaces/ILogic.sol#4-6)
 Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#missing-inheritance
 INFO:Detectors:
-Parameter Implementation.initialize(address)._owner (src/Implementation.sol#31) is not in mixedCase
+Parameter Implementation.initialize(address)._owner (src/Implementation.sol#36) is not in mixedCase
 Parameter VaultFactory.createWithRevert(uint256,bytes)._nonce (src/VaultFactory.sol#53) is not in mixedCase
 Parameter VaultFactory.predictVaultAddr(address)._user (src/VaultFactory.sol#78) is not in mixedCase
 Parameter VaultFactory.getUserVaults(address)._user (src/VaultFactory.sol#84) is not in mixedCase

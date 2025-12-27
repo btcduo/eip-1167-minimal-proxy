@@ -1,3 +1,4 @@
+[FIXED] Resolved by adding `_disableInitializers()` in the template contract's constructor
 ## Lack Of Disable Initializers Causing Template Contract Initialized By An Attacker
 *Description*
 The implementation (template contract) is used to provide logic functions for the user's EIP-1167-based clone instance.

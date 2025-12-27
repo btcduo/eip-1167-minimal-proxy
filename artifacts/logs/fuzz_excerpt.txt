@@ -1,0 +1,2 @@
+6:[PASS] testFuzz_deposit_withdraw(uint96,uint96) (runs: 256, μ: 251563, ~: 253602)
+7:Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 16.02ms (15.65ms CPU time)
