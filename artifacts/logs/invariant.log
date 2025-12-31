@@ -1,5 +1,5 @@
-Compiling 1 files with Solc 0.8.30
-Solc 0.8.30 finished in 331.85ms
+Compiling 20 files with Solc 0.8.30
+Solc 0.8.30 finished in 371.74ms
 Compiler run successful!
 
 Ran 3 tests for test/CloneFactory_Invariant.t.sol:CloneFactory_Invariant
@@ -8,40 +8,40 @@ Ran 3 tests for test/CloneFactory_Invariant.t.sol:CloneFactory_Invariant
 ╭----------+-------------+-------+---------+----------╮
 | Contract | Selector    | Calls | Reverts | Discards |
 +=====================================================+
-| Handler  | createVault | 16813 | 0       | 63       |
+| Handler  | createVault | 16693 | 0       | 76       |
 |----------+-------------+-------+---------+----------|
-| Handler  | deposit     | 16845 | 0       | 53       |
+| Handler  | deposit     | 16771 | 0       | 85       |
 |----------+-------------+-------+---------+----------|
-| Handler  | withdraw    | 16520 | 0       | 62       |
+| Handler  | withdraw    | 16767 | 0       | 70       |
 ╰----------+-------------+-------+---------+----------╯
+
+Logs:
+  Bound result 0
 
 [PASS] invariant_ownerNeverChange() (runs: 500, calls: 50000, reverts: 0)
 
 ╭----------+-------------+-------+---------+----------╮
 | Contract | Selector    | Calls | Reverts | Discards |
 +=====================================================+
-| Handler  | createVault | 16761 | 0       | 70       |
+| Handler  | createVault | 16765 | 0       | 59       |
 |----------+-------------+-------+---------+----------|
-| Handler  | deposit     | 16880 | 0       | 56       |
+| Handler  | deposit     | 16713 | 0       | 61       |
 |----------+-------------+-------+---------+----------|
-| Handler  | withdraw    | 16552 | 0       | 67       |
+| Handler  | withdraw    | 16720 | 0       | 78       |
 ╰----------+-------------+-------+---------+----------╯
-
-Logs:
-  Bound result 0
 
 [PASS] invariant_vaultListAreDeployedContracts() (runs: 500, calls: 50000, reverts: 0)
 
 ╭----------+-------------+-------+---------+----------╮
 | Contract | Selector    | Calls | Reverts | Discards |
 +=====================================================+
-| Handler  | createVault | 16821 | 0       | 68       |
+| Handler  | createVault | 16690 | 0       | 67       |
 |----------+-------------+-------+---------+----------|
-| Handler  | deposit     | 16762 | 0       | 56       |
+| Handler  | deposit     | 16727 | 0       | 86       |
 |----------+-------------+-------+---------+----------|
-| Handler  | withdraw    | 16604 | 0       | 63       |
+| Handler  | withdraw    | 16793 | 0       | 57       |
 ╰----------+-------------+-------+---------+----------╯
 
-Suite result: ok. 3 passed; 0 failed; 0 skipped; finished in 6.96s (20.85s CPU time)
+Suite result: ok. 3 passed; 0 failed; 0 skipped; finished in 7.48s (22.41s CPU time)
 
-Ran 1 test suite in 6.96s (6.96s CPU time): 3 tests passed, 0 failed, 0 skipped (3 total tests)
+Ran 1 test suite in 36.54s (7.48s CPU time): 3 tests passed, 0 failed, 0 skipped (3 total tests)

@@ -4,4 +4,4 @@
 9:[PASS] testRevert_Clone_ZeroValue() (gas: 180230)
 10:[PASS] testRevert_Factory_AlreadyDeployed() (gas: 183593)
 11:[PASS] testRevert_Factory_InitFailed() (gas: 61534)
-12:Suite result: ok. 6 passed; 0 failed; 0 skipped; finished in 1.53ms (2.61ms CPU time)
+12:Suite result: ok. 6 passed; 0 failed; 0 skipped; finished in 1.69ms (7.24ms CPU time)

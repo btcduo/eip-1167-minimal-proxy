@@ -1,2 +1,2 @@
 6:[PASS] test_clone_init_deposit_withdraw_OK() (gas: 246326)
-7:Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 440.13µs (89.88µs CPU time)
+7:Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 1.24ms (119.71µs CPU time)

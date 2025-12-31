@@ -12,3 +12,25 @@ docs/
 
 # Dotenv file
 .env
+
+# Repo
+artifacts/@openzeppelin/
+artifacts/build-info/
+artifacts/src/
+typechain-types/
+
+# Hardhat
+hardhat/artifacts/
+hardhat/node_modules/
+hardhat/cache/
+hardhat/out/
+hardhat/types/
+
+# Node / JS
+node_modules/
+
+# OS / Editor
+.DS_Store
+.vscode/
+.idea/
+*.log

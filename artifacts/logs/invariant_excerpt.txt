@@ -1,4 +1,4 @@
 6:[PASS] invariant_ledgerNeverExceedsRealETH() (runs: 500, calls: 50000, reverts: 0)
-18:[PASS] invariant_ownerNeverChange() (runs: 500, calls: 50000, reverts: 0)
+21:[PASS] invariant_ownerNeverChange() (runs: 500, calls: 50000, reverts: 0)
 33:[PASS] invariant_vaultListAreDeployedContracts() (runs: 500, calls: 50000, reverts: 0)
-45:Suite result: ok. 3 passed; 0 failed; 0 skipped; finished in 6.96s (20.85s CPU time)
+45:Suite result: ok. 3 passed; 0 failed; 0 skipped; finished in 7.48s (22.41s CPU time)
