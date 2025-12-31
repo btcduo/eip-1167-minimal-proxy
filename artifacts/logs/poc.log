@@ -1,10 +1,10 @@
 Compiling 1 files with Solc 0.8.30
-Solc 0.8.30 finished in 300.05ms
+Solc 0.8.30 finished in 302.58ms
 Compiler run successful!
 
 Ran 2 tests for test/CloneFactory_PoC_Fixed.t.sol:CloneFactory_PoC_Fixed
 [PASS] test_Implementation_Init_Reverts_AfterFix() (gas: 14569)
 [PASS] test_Init_ViaFactory_WorkOut_AfterFix() (gas: 179094)
-Suite result: ok. 2 passed; 0 failed; 0 skipped; finished in 474.08µs (169.79µs CPU time)
+Suite result: ok. 2 passed; 0 failed; 0 skipped; finished in 535.71µs (172.79µs CPU time)
 
-Ran 1 test suite in 83.94ms (474.08µs CPU time): 2 tests passed, 0 failed, 0 skipped (2 total tests)
+Ran 1 test suite in 200.58ms (535.71µs CPU time): 2 tests passed, 0 failed, 0 skipped (2 total tests)

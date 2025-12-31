@@ -1,5 +1,5 @@
 Compiling 1 files with Solc 0.8.30
-Solc 0.8.30 finished in 307.14ms
+Solc 0.8.30 finished in 331.89ms
 Compiler run successful!
 
 Ran 6 tests for test/CloneFactory_Revert.t.sol:CloneFactory_Revert
@@ -9,6 +9,6 @@ Ran 6 tests for test/CloneFactory_Revert.t.sol:CloneFactory_Revert
 [PASS] testRevert_Clone_ZeroValue() (gas: 180230)
 [PASS] testRevert_Factory_AlreadyDeployed() (gas: 183593)
 [PASS] testRevert_Factory_InitFailed() (gas: 61534)
-Suite result: ok. 6 passed; 0 failed; 0 skipped; finished in 1.53ms (2.61ms CPU time)
+Suite result: ok. 6 passed; 0 failed; 0 skipped; finished in 1.69ms (7.24ms CPU time)
 
-Ran 1 test suite in 84.02ms (1.53ms CPU time): 6 tests passed, 0 failed, 0 skipped (6 total tests)
+Ran 1 test suite in 1.93s (1.69ms CPU time): 6 tests passed, 0 failed, 0 skipped (6 total tests)

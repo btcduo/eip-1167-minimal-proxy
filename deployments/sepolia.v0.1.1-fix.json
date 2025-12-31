@@ -1,0 +1,46 @@
+{
+  "chain": "sepolia",
+  "chainId": 11155111,
+  "network": "ethereum-sepolia",
+  "deployer": "0x0049ceacf337b8adcacf06a5bf3b1878228c87bb",
+  "contracts": {
+    "impl": {
+      "address": "0x3a8a4a4dFfc21C65E0aC8578993ec6CD80082dF8",
+      "txHash": "0x0721a685fd5fb0cdf3a18426c7d5b3702f894cadb2c09119f0290283e7c571b3",
+      "block": 9925122,
+      "verified": true
+    },
+    "factory": {
+      "address": "0xEDB841E9A5DCAe0D3b06E8f23f642f443740c00f",
+      "txHash": "0x6fa5a25377392d3cc78875e5a8f46b8e0959d32aaa00528fc59c4be85530944b",
+      "block": 9925122,
+      "verified": true
+    }
+  },
+  "timestamp": 1766841545550,
+  "commit": "6d08c8c",
+  "notes": "v0.1.1-fix sepolia deployment",
+  "interactions": [
+    {
+      "txType": "CALL",
+      "txHash": "0x1aa003d45697ceba7b6c92aa2ba316176267ac0cf6cd35d1021ebeb700d63ef2",
+      "to": "0xedb841e9a5dcae0d3b06e8f23f642f443740c00f",
+      "contractName": null,
+      "function": "create()"
+    },
+    {
+      "txType": "CALL",
+      "txHash": "0x77b6fc08faa0419179b3f748c9cd90f6fba2d2da85a9360e4a977e130ac204b6",
+      "to": "0x402eee6b3b724df3cc984e12f0a1f81c30e73d75",
+      "contractName": null,
+      "function": "deposit()"
+    },
+    {
+      "txType": "CALL",
+      "txHash": "0x9d604e3214bedc064bb328ae5503af7e1e57005c1520aca0a07cc321be73c22e",
+      "to": "0x402eee6b3b724df3cc984e12f0a1f81c30e73d75",
+      "contractName": null,
+      "function": "withdraw(uint256)"
+    }
+  ]
+}
